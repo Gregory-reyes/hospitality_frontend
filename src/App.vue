@@ -1,30 +1,45 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
-</template>
+    <div id="app" class="app">
+      <div class="header">
+        <h1>Hospitality Pets</h1>
+      </div>
+    </div>
+  </template>
+  <script>
+  
+  export default ({
+      
+      data: function(){
+    },
+      methods:{
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+    },
+    created: function(){
 
-nav {
-  padding: 30px;
-}
+    }
+  })
+  </script>
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  <style>
+    body{
+      margin: 0 0 0 0;
+    }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+    .header{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 10vh;
+      min-height: 100px;
+      background-color: #4480c1 ;
+      color:#e5e9e6 ;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h1{
+      width: 20%;
+      text-align: center;
+    }
+  </style>
