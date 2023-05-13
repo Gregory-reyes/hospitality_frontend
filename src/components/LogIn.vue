@@ -90,7 +90,7 @@
         width: 100%;
         height: 40px;
         color: #E5E7E9;
-        background: #283747;
+        background: #77a8d9;
         border: 1px solid #E5E7E9;
         border-radius: 5px;
         padding: 10px 25px;

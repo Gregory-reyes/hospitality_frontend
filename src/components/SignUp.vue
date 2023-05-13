@@ -1,21 +1,40 @@
     <template>
         <div class="signUp_user">
             <div class="container_signUp_user">
-                <form v-on:submit.prevent="processSignUp">
+                <form v-on:submit.prevent="processSignUp"> 
                     <label id="user_username"> Username:
-                        <input type="text" v-model="user.username" placeholder="Username" required>
+                        <input type="text" v-model="user.username" placeholder="Usuario" required>
                     </label>
                     <label id="user_password"> Password:
-                        <input type="password" v-model="user.password" placeholder="Password" required>
+                        <input type="password" v-model="user.password" placeholder="Contraseña" required>
                     </label>
-                    <label id="user_name"> Name:
-                        <input type="text" v-model="user.name" placeholder="Name" required>
+                    <label for="user_perfil"> Perfil:
+                        <select id="user_perfil" v-model="user.perfil">
+                        <option value="SeleccionePerfil">Seleccione una opción</option>
+                        <option value="empleado">Empleado</option>
+                        <option value="familiar">Familiar</option>
+                        <option value="paciente">Paciente</option>                        
+                        </select>                        
                     </label>
-                    <label id="user_email"> E-mail:
-                        <input type="email" v-model="user.email" placeholder="E-mail" required>
+                    <br>
+                    <label id="user_name"> Nombre:
+                        <input type="text" v-model="user.name" placeholder="Nombre" required>
                     </label>
-                    <label id="user_balance"> Balance:
-                        <input type="number" v-model="user.account.balance" placeholder="Balance" required>
+                    <label id="user_apellido"> Apellidos:
+                        <input type="text" v-model="user.apellidos" placeholder="Apellidos" required>
+                    </label>
+                    <label id="user_telefono"> Telefono:
+                        <input type="" v-model="user.telefono" placeholder="N Telefonico" required>
+                    </label>
+                    
+                    <label for="user_genero"> Genero:
+                        <select id="user_genero" v-model="user.genero">
+                        <option value="SeleccioneGenero">Seleccione un genero</option>
+                        <option value="familiar">Familiar</option>
+                        <option value="paciente">Paciente</option>
+                        <option value="paciente">Paciente</option>
+                        <option value="paciente">Paciente</option>
+                        </select>
                     </label>
                     <button type="submit">Registrarse</button>
                 </form>    
@@ -32,12 +51,10 @@
                     username: "",
                     password: "",
                     name: "",
-                    email: "",
-                    account: {
-                        lastChangeDate: (new Date()).toJSON().toString(),
-                        balance: "",
-                        isActive: true
-                    }  
+                    apellidos: "",
+                    telefono:"",
+                    genero:""
+                    
                 }
             }
         },
@@ -61,6 +78,7 @@
             }
         }
     }
+    
     </script>
 
     <style>
@@ -102,7 +120,7 @@
         width: 100%;
         height: 40px;
         color: #E5E7E9;
-        background: #283747;
+        background: #77a8d9;
         border: 1px solid #E5E7E9;
         border-radius: 5px;
         padding: 10px 25px;

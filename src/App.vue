@@ -111,7 +111,7 @@
     .footer{ 
       margin: 0;
       padding: 0;
-      height: 5vh;
+      height: 10vh;
       min-height: 100px;
       background-color: #77a8d9;
       color: #FDFEFE;
